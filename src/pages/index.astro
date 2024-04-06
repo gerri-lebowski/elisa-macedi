@@ -1,4 +1,6 @@
 ---
+import BasicLayout from "../layouts/BasicLayout.astro";
+import Hero from "../components/Hero.astro";
 
 ---
 
@@ -10,7 +12,11 @@
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
 	</head>
+
 	<body>
-		<h1>Astro</h1>
+		<BasicLayout>	
+			<Hero />
+		</BasicLayout>
 	</body>
+
 </html>

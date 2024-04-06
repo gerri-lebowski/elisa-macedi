@@ -1,0 +1,72 @@
+/* Root */ 
+:root {
+    --primary: #000;
+    --secondary: #fff;
+    --link: var(--primary);
+    --bg: var(--secondary);
+
+    /* Fonts */
+    --text: 'Inter', sans-serif;
+    --title: 'Inter', sans-serif;
+}
+
+/* Fonts */ 
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../public/fonts/Inter-Bold.ttf') format('ttf');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Inter';
+    src: url('../public/fonts/Inter-Light.ttf') format('ttf');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Inter';
+    src: url('../public/fonts/Inter-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+/* Normalize CSS */
+
+*,
+::before,
+::after {
+	box-sizing: border-box;
+}
+
+html {
+	font-family:
+		system-ui,
+		'Segoe UI',
+		Roboto,
+		Helvetica,
+		Arial,
+		sans-serif,
+		'Apple Color Emoji',
+		'Segoe UI Emoji';
+	line-height: 1.15; 
+	-webkit-text-size-adjust: 100%; 
+	-moz-tab-size: 4; 
+	tab-size: 4; 
+}
+
+body {
+	margin: 0;
+}
+
+
+.container{
+    width: min(100% - 6rem, 60rem);
+    margin-inline: auto; 
+}
+
