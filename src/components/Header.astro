@@ -3,18 +3,31 @@ import NavMenu from "./NavMenu.astro";
 
 ---
 
-<div class="container">
+<header>
+<div class="container ">
     <div class="header">
-        <a href="">Logo</a>
+        <a href="/" class="logo">Logo</a>
         <NavMenu />
     </div>
 </div>
+</header>
 
 
 <style>
+    header{
+        background: beige;
+    }
+
+    .logo {
+
+    }
+
     .header{
         display: flex;
         justify-content: space-between;
-        padding-block: 1.5em;
+        padding-block: 2em;
     }
+
+    @media
+
 </style>

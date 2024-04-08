@@ -1,0 +1,75 @@
+---
+---
+
+<section>
+    <div class="container">
+        <h2>Percorsi</h2>
+    </div>
+    <div class="container card">
+        <div class="card__box">
+            <img src="../../public/media/segnaposto.webp" alt="" class="card__img">
+
+            <div class="card__content">
+            <h3 class="card__title">Percorso uno</h3>
+            <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, ab.</p>
+        </div>
+            <div class="card__btn"><a href="#" class="btn-light">Vai</a></div>
+        </div>
+        <div class="card__box">
+            
+            <img src="../../public/media/segnaposto.webp" alt="" class="card__img">
+            
+            <div class="card__content">
+            <h3 class="card__title">Percorso uno</h3>
+            <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, ab.</p>
+            </div>
+            
+            <div class="card__btn"><a href="#" class="btn-light">Vai</a></div>
+        
+        </div>
+    </div>
+</section>
+
+<style>
+
+    .card {
+        display: flex;
+        gap: 1rem;
+        
+    }
+    .card__box  {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        background: beige;
+        gap: 2rem
+        
+    }
+
+    .card__content {
+        padding: 2em;
+    }
+
+    .card__title {
+        text-transform: uppercase;
+        
+    }
+
+
+    .card__btn {
+        display: flex;
+        width: 100%;
+        justify-content: end;
+
+    }
+
+    .btn-light {
+        display: flex;
+        place-content: center;
+        align-items: center;
+        width: 5rem;
+        height: 5rem;
+        background-color: bisque;
+    }
+
+</style>

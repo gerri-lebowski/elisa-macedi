@@ -3,11 +3,7 @@
     --primary: #000;
     --secondary: #fff;
     --link: var(--primary);
-    --bg: var(--secondary);
-
-    /* Fonts */
-    --text: 'Inter', sans-serif;
-    --title: 'Inter', sans-serif;
+    --bg: #ddd;
 }
 
 /* Fonts */ 
@@ -42,18 +38,11 @@
 ::before,
 ::after {
 	box-sizing: border-box;
+  margin: 0;
 }
 
 html {
-	font-family:
-		system-ui,
-		'Segoe UI',
-		Roboto,
-		Helvetica,
-		Arial,
-		sans-serif,
-		'Apple Color Emoji',
-		'Segoe UI Emoji';
+	font-family: 'Inter', sans-serif;
 	line-height: 1.15; 
 	-webkit-text-size-adjust: 100%; 
 	-moz-tab-size: 4; 
@@ -65,8 +54,21 @@ body {
 }
 
 
-.container{
-    width: min(100% - 6rem, 60rem);
-    margin-inline: auto; 
+h1 {font-size: 4rem; font-weight: bold;}
+h2 {font-size: 3rem;}
+h3 {font-size: 2rem;}
+p {font-size: 1.6rem;font-weight: 300;}
+
+a {
+  text-decoration: none;
+  color: var(--link);
 }
 
+section {
+  margin-block: 2em;
+}
+
+.container{
+    width: min(100% - 4rem, 80rem);
+    margin-inline: auto;
+}
