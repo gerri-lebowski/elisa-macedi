@@ -1,24 +1,51 @@
 ---
 
+const navmenu: Menu[] = [{
+        label: "Home",
+        href: "/",
+    },
+    {
+        label: "Chi sono",
+        href: "/chi-sono",
+    },
+    {
+        label: "Cultura",
+        href: "/cultura",
+    },
+    {
+        label: "Percorsi",
+        href: "/percorsi",
+    },
+    {
+        label: "Prenota",
+        href: "/prenota",
+    }
+];
+
 ---
 
 <ul class="nav">
-    <li class="nav-item">
-        <a href="/chi-sono">Chi sono</a>
+    {navmenu.map((item, index) => (
+        <li class="nav-item"><a href={item.href} target={item.external ? "_blank" : "" } rel={item.external ? "noopener" : "" }>
+          {item.label}
+        </a></li>
+        ))}
+    <!-- <li class="nav-item">
+        <a href="/chi-sono" data-astro-prefetch>Chi sono</a>
     </li>
     <li class="nav-item">
-        <a href="/cultura">Cultura</a>
+        <a href="/cultura" data-astro-prefetch>Cultura</a>
     </li>
     <li class="nav-item">
-        <a href="/percorsi">Percorsi</a>
+        <a href="/percorsi" data-astro-prefetch>Percorsi</a>
     </li>
     <li class="nav-item">
-        <a href="/prenota">Prenota</a>
-    </li>
+        <a href="/prenota" data-astro-prefetch>Prenota</a>
+    </li> -->
 </ul>
 
 <!-- mobile menu -->
-<div class="mobile-menu">
+<div class="mobile-menu" id="mobile-menu">
 
 <span></span>
 <span></span>
@@ -26,6 +53,8 @@
 </div>
 
 <style>
+
+    /* DESKTOP */
 
     .nav{
         display: flex;
@@ -38,8 +67,11 @@
     .nav-item a:link{
         color: var(--link)
         text-decoration: none;
-    }    
+    } 
+    
+    /* MOBILE MENU */
 
+    /* burger */
     .mobile-menu{
         display: none;
         cursor: pointer;
@@ -55,33 +87,52 @@
     }
 
     @media (max-width: 768px) {
+    /* burger */
     .mobile-menu {
         display: block;
     }
 
-
+    /* dropdown */
     .nav {
         position: absolute;
-         top: 12%;
-         left: 0;
+        top: 9.5%;
+        left: 0;
         display: flex;
         flex-direction: column;
+        align-items: center;
         padding-inline: 2rem;
         background-color: var(--bg);
-        width: 100%;
+        opacity: 0.9;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        width: 100%;  
         height: 100vh;
-        gap: 3rem;
+        gap: 4rem;
         height: 0;
         overflow: hidden;
+        padding-top: 0rem;
         z-index: 99;
         transition: all 1s cubic-bezier(.215, .61, .355, 1);
-    }
-
-    .show-nav {
-        height: 100vh;
-        padding-top: 2rem;
         
     }
+
+    .show {
+        padding-top: 4rem;
+        height: 100vh;
+
+    }
+
 }
 
 </style>
+
+<script>
+
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navigationMenu = document.querySelector('.nav');
+
+    mobileMenu.addEventListener('click', () => {
+    navigationMenu.classList.toggle("show");
+    });
+
+</script>
