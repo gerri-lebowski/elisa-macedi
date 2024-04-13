@@ -39,10 +39,10 @@
 ::after {
 	box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 html {
-	font-family: 'Inter', sans-serif;
 	line-height: 1.15; 
 	-webkit-text-size-adjust: 100%; 
 	-moz-tab-size: 4; 
@@ -50,25 +50,18 @@ html {
 }
 
 body {
+  font-family: 'Inter', sans-serif;
 	margin: 0;
 }
 
 
-h1 {font-size: 4rem; font-weight: bold;}
+h1 {font-family: 'Garamond', serif;font-size: 4rem; font-weight: bold;}
 h2 {font-size: 3rem;}
 h3 {font-size: 2rem;}
-p {font-size: 1.6rem;font-weight: 300;}
+p  {font-size: 1.6rem;font-weight: 300;}
 
-a {
-  text-decoration: none;
-  color: var(--link);
-}
+a { text-decoration: none; color: var(--link); }
 
-section {
-  margin-block: 2em;
-}
+section { margin-block: 2em; }
 
-.container{
-    width: min(100% - 4rem, 80rem);
-    margin-inline: auto;
-}
+.container{ width: min(100% - 4rem, 80rem); margin-inline: auto; }

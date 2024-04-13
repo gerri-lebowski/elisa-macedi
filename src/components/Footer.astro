@@ -1,8 +1,55 @@
 ---
+import Form from "./Form.astro";
 ---
 
 <footer>
+    <!-- WhatsApp -->
     <div class="container">
-        <h2>Footer</h2>
+        <div class="whatsapp-box">
+            <a href="#" class="whatsapp-link">
+                <span>Hai bisogno?</span>
+                <img src="../../public/media/whatsapp.svg" alt="" class="whatsapp-logo">
+            </a>
+        </div>
+    </div>
+
+    <!-- Contact form -->
+    <Form />
+    <div class="container">
+        <div class="footer-content">
+            <p>Footer content</p>
+        </div>
     </div>
 </footer>
+
+
+<style>
+    .whatsapp-box  {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        place-content: center;
+        height: 4rem;
+        padding-inline: 2em;
+        position: fixed;
+        bottom: 12px;
+        right: 12px;
+        background: #FCF5EB;
+        border-radius: .25rem;
+
+    }
+
+    .whatsapp-link {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+    .whatsapp-logo {
+        max-width: 100%;
+        height: 1.2rem;
+    }
+
+    .footer-content {
+        height: 20vh;
+    }
+</style>
