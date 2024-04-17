@@ -6,7 +6,7 @@ import NavMenu from "./NavMenu.astro";
 <header>
 <div class="container ">
     <div class="header">
-        <a href="/" class="logo">Elisa Macedi</a>
+        <a href="/" class="logo">Dott.ssa Elisa Macedi<br><p>Biologa Nutrizionista</p></a>
         <NavMenu />
     </div>
 </div>
@@ -16,17 +16,18 @@ import NavMenu from "./NavMenu.astro";
 <style>
     
     header{
-        background: beige;
+        background: var(--light-bg);
     }
 
     .logo {
-
+        color: var(--secondary);
     }
 
     .header{
         display: flex;
         justify-content: space-between;
-        padding-block: 2em;
+        align-items: center;
+        padding-block: 1.5rem;
     }
 
     @media

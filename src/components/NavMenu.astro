@@ -1,29 +1,20 @@
 ---
 
-const navmenu: Menu[] = [{
-        label: "Home",
-        href: "/",
-    },
+const navmenu: Menu[] = [
+
     {
         label: "Chi sono",
         href: "/chi-sono",
     },
     {
-        label: "Cultura",
+        label: "Cultura Dieta",
         href: "/cultura",
     },
     {
         label: "Percorsi",
         href: "/percorsi",
     },
-    {
-        label: "Prenota",
-        href: "/prenota",
-    },
-    {
-        label: "Page",
-        href: "/page",
-    }
+
 ];
 
 ---
@@ -58,11 +49,10 @@ class="ham-menu">
         list-style-type: none;
         gap: 1.5em;
         align-items: left;
-        line-height: 0;
     }
 
-    .menu-item a:link{
-        color: var(--link)
+    .menu-item a{
+        color: var(--secondary);
         text-decoration: none;
     } 
 

@@ -1,0 +1,25 @@
+---
+import ErrorPage from "../layouts/ErrorPage.astro"
+---
+
+<ErrorPage title="404 error">
+    <div class="container error">
+        <div class="error__block">
+            <h1 class="error__title">Ops.. sembra che la pagina non esista</h1>
+            <a href="/" class="error__backto">Torna al sito</a>
+        </div>
+    </div>
+</ErrorPage>
+
+<style>
+    .error {
+        margin: 5rem auto;
+        
+    }
+
+    .error__backto {
+        font-size: 2rem;
+    }
+
+</style>
+

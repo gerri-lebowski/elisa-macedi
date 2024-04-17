@@ -6,12 +6,11 @@
     <div class="container">
     <div class="hero">
         <div class="hero__content">
-            <h1>Elisa Macedi</h1>
-            <p>Biologa nutrizionista specializzata in...</p>
+            <h1>Specializzata in Disturbi alimentari, Amenorrea Ipotalamica e Sindrome dell'Ovaio Policistico</h1>
         </div>
 
         <div class="hero__image">
-            <img src="/media/segnaposto.webp" alt="">
+            <img src="media/elisa-maced-biologa-nutrizionista.jpg" alt="">
         </div>
     </div>	
 </div>
@@ -19,12 +18,17 @@
 
 <style>
 
+    section {
+        margin: 0;
+    }
+
+    
+
     .hero {
         display: grid;
-        grid-template-columns:
-            repeat(auto-fit, minmax(20rem, 1fr));
-        padding-block: 2em;
-        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        gap: 4rem;
+        
     }
 
     .hero__content {
@@ -35,12 +39,14 @@
     }
 
     .hero__image {
+       
         
     }
 
     .hero__image > img {
         width: 100%;
-        height: 50vh;
+        height: 60vh;
+        object-position: top;
         object-fit: cover;
     }
     

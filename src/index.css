@@ -1,9 +1,26 @@
 /* Root */ 
 :root {
-    --primary: #000;
-    --secondary: #fff;
+    
+    /* Color */
+    --primary: rgb(254,190,152,100%);
+    --secondary: rgb(40,15,0,100%);
+    --light-bg: rgb(255,239,230,100%);
+    --dark-bg: rgb(82,42,40,100%);
+    --white: #fff;
     --link: var(--primary);
-    --bg: #ddd;
+    /* Text */
+    --text-xsmall: clamp(12px, 2vw, 16px); 
+    --text-small: clamp(14px, 2vw, 18px); 
+    --text-medium: clamp(18px, 2.5vw, 24px); 
+    --text-large: clamp(24px, 3vw, 32px); 
+    --text-xlarge: clamp(32px, 3.5vw, 40px); 
+    /* Spacing */
+    --space-xs: clamp(0.25rem, 1vw, 0.5rem);
+    --space-sm: clamp(0.5rem, 1.5vw, 1rem); 
+    --space-md: clamp(1rem, 2vw, 1.5rem);
+    --space-lg: clamp(1.5rem, 2.5vw, 2rem); 
+    --space-xl: clamp(2rem, 3vw, 2.5rem); 
+    --space-xxl: clamp(3rem, 3.5vw, 4.5rem); 
 }
 
 /* Fonts */ 
@@ -39,7 +56,6 @@
 ::after {
 	box-sizing: border-box;
   margin: 0;
-  padding: 0;
 }
 
 html {
@@ -47,6 +63,7 @@ html {
 	-webkit-text-size-adjust: 100%; 
 	-moz-tab-size: 4; 
 	tab-size: 4; 
+  font-size: 62.5%;
 }
 
 body {
@@ -54,14 +71,13 @@ body {
 	margin: 0;
 }
 
+h1 {font-size: var(--text-xlarge); font-weight: bold;}
+h2 {font-size: var(--text-large);}
+h3 {font-size: var(--text-medium);}
+p  {font-size: var(--text-small); }
 
-h1 {font-family: 'Garamond', serif;font-size: 4rem; font-weight: bold;}
-h2 {font-size: 3rem;}
-h3 {font-size: 2rem;}
-p  {font-size: 1.6rem;font-weight: 300;}
+a { font-size: 1.5rem;text-decoration: none; color: var(--link); }
 
-a { text-decoration: none; color: var(--link); }
-
-section { margin-block: 2em; }
-
-.container{ width: min(100% - 4rem, 80rem); margin-inline: auto; }
+section {margin-block: 3rem;}
+.container { width: min(100% - 4rem, 96rem); margin-inline: auto; }
+.two-columns {display: grid; grid-template-columns: repeat(auto-fit,minmax(20rem, 1fr));}
