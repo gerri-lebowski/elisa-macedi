@@ -2,12 +2,11 @@
 :root {
     
     /* Color */
-    --primary: rgb(254,190,152,100%);
-    --secondary: rgb(40,15,0,100%);
-    --light-bg: rgb(255,239,230,100%);
-    --dark-bg: rgb(82,42,40,100%);
+    --primary: #EEC442;
+    --secondary: #171306;
     --white: #fff;
     --link: var(--primary);
+
     /* Text */
     --text-xsmall: clamp(12px, 2vw, 16px); 
     --text-small: clamp(14px, 2vw, 18px); 
@@ -79,5 +78,5 @@ p  {font-size: var(--text-small); }
 a { font-size: 1.5rem;text-decoration: none; color: var(--link); }
 
 section {margin-block: 3rem;}
-.container { width: min(100% - 4rem, 96rem); margin-inline: auto; }
+.container { width: min(100% - 4rem, 120rem); margin-inline: auto; }
 .two-columns {display: grid; grid-template-columns: repeat(auto-fit,minmax(20rem, 1fr));}

@@ -14,12 +14,21 @@ import Form from "./Form.astro";
     </div>
     <div class="container">
         <div class="footer-content">
-            <p>Footer content</p>
+            <h3>Dott.ssa Elisa Macedi</h3>
+            <p>Biologa Nutrizionista</p>
+            <p>Indirizzo</p>
+            <p>Telefono</p>
         </div>
     </div>
 </footer>
 
 <style>
+
+    footer{
+        min-height: 50vh;
+        background: var(--primary);
+        overflow: hidden;
+    }
     .whatsapp-box  {
         display: flex;
         flex-direction: column;
@@ -32,6 +41,7 @@ import Form from "./Form.astro";
         right: 12px;
         background: #FCF5EB;
         border-radius: .25rem;
+        overflow: hidden;
 
     }
 
@@ -46,6 +56,11 @@ import Form from "./Form.astro";
     }
 
     .footer-content {
-        height: 20vh;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+        padding-block: 2rem;
     }
+
 </style>
