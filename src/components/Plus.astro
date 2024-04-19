@@ -4,7 +4,7 @@
 
 <section >
     <div class="container">
-        <div class="plus two-columns">
+        <div class="plus">
             <div class="plus__title">
                 <h2>Insieme capiremo che in nutrizione:</h2>
             </div>
@@ -70,22 +70,26 @@
 <style>
 
     section {
-        background: #f8f8f8;
+        background: var(--primary);
     }
 
     .plus {
-        row-gap: 1rem;
         padding-block: calc(20vh - 2rem);
+        color: var(--white);
     }
 
-    .plus__title {
-        
+    .plus__title > h2 {
+        color: var(--white);
+        font-style: italic;
+        font-size: 6rem;
     }
 
     .plus__points {
         display: flex;
         flex-direction: column;
-        gap: 3rem;
+        gap: 4rem;
+        margin-block: 4rem;
+        max-width: 80%;
     }
 
     input{
@@ -104,16 +108,21 @@
         display: flex;
         justify-content: space-between;
         cursor: pointer;
-        background: var(--ligh-bg);
-        color: var(--secondary);
-        font-size: 1.6rem;
         border-bottom: .5px solid;
+        margin-left: 4rem;
+        font-size: 1.6rem;
     }
 
     .accordion-content {
         max-height: 0;
         padding: 0 1em;
-        transition: all .5s ease;
+        transition: all .35s ease;
+        margin-left: 4rem;
+
+    }
+
+    .accordion-content > p {
+        font-size: 1.6rem;
     }
 
     input:checked ~ .accordion-content {

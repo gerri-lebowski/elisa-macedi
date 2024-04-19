@@ -12,7 +12,11 @@ const navmenu: Menu[] = [
     },
     {
         label: "Percorsi",
-        href: "/percorsi",
+        href: "#",
+    },
+    {
+        label: "Prenota",
+        href: "/prenota"
     },
 
 ];
@@ -47,21 +51,25 @@ class="ham-menu">
     .menu{
         display: flex;
         list-style-type: none;
-        gap: 1.5em;
         align-items: left;
+        gap: 4rem;
     }
 
     .menu-item a{
-        color: var(--secondary);
         text-decoration: none;
+        font-size: var(--text-xs);
     } 
+
+    
+
+    
 
     /* MOBILE */
 
     @media (max-width: 768px) {
 
         .off-screen-menu {
-        background-color: var(--bg);
+        background-color: var(--primary);
         height: 100vh;
         width: 100%;
         max-width: 50vw;

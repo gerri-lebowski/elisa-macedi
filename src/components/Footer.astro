@@ -1,5 +1,27 @@
 ---
 import Form from "./Form.astro";
+
+const footerMenu: Menu[] = [
+
+    {
+        label: "Chi sono",
+        href: "/chi-sono",
+    },
+    {
+        label: "Cultura Dieta",
+        href: "/cultura",
+    },
+    {
+        label: "Percorsi",
+        href: "/percorsi",
+    },
+    {
+        label: "Prenota",
+        href: "/prenota"
+    },
+
+];
+
 ---
 
 <footer>
@@ -12,23 +34,77 @@ import Form from "./Form.astro";
             </a>
         </div>
     </div>
-    <div class="container">
+    
         <div class="footer-content">
+            <div class="col">
             <h3>Dott.ssa Elisa Macedi</h3>
             <p>Biologa Nutrizionista</p>
             <p>Indirizzo</p>
             <p>Telefono</p>
-        </div>
+            </div>
+
+            <div class="col">
+                <h3>Mappa del sito</h3>
+                <ul class="footer-menu">
+                    {footerMenu.map((item, index) => (
+                        <li class="menu-item"><a href={item.href} target={item.external ? "_blank" : "" } rel={item.external ? "noopener" : "" }>
+                          {item.label}
+                        </a></li>
+                        ))}
+                </ul>
+
+            <div class="col">
+                <h3>Dott.ssa Elisa Macedi</h3>
+                <p>Biologa Nutrizionista</p>
+                <p>Indirizzo</p>
+                <p>Telefono</p>
+            </div>
     </div>
 </footer>
 
 <style>
 
-    footer{
-        min-height: 50vh;
+
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+        width: 100%;
+        padding-inline: 1rem;
+        min-height: 30rem;
         background: var(--primary);
-        overflow: hidden;
+        
     }
+
+    .footer-menu {
+        display: flex; 
+        flex-direction: column; 
+        margin: 0;
+        align-items: flex-start;
+    }
+
+    .footer-menu > li,
+    .footer-menu > a {
+
+        list-style-type: none;
+        color: var(--white);
+        line-height: 1.7em;
+        font-family: 'Jost', sans-serif;
+        margin: 0;
+    }
+
+
+    h3 {color: var(--white); font-family: 'Card', serif; text-transform: none;}
+    p {color: var(--white); }
+
+    .col {
+
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        margin-top: 2em;
+    }
+
+
     .whatsapp-box  {
         display: flex;
         flex-direction: column;
@@ -53,14 +129,6 @@ import Form from "./Form.astro";
     .whatsapp-logo {
         max-width: 100%;
         height: 1.2rem;
-    }
-
-    .footer-content {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        justify-content: center;
-        padding-block: 2rem;
     }
 
 </style>

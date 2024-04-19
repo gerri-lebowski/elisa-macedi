@@ -4,36 +4,33 @@ import NavMenu from "./NavMenu.astro";
 ---
 
 <header>
-<div class="container ">
     <div class="header">
         <a href="/" class="logo">Dott.ssa Elisa Macedi<br><p>Biologa Nutrizionista</p></a>
         <NavMenu />
     </div>
-</div>
 </header>
 
 
 <style>
-    
-    header{
-        background: var(--light-bg);
-    }
 
     .logo {
-        color: var(--secondary);
+        font-family: 'Cardo', serif;
+        color: var(--primary);
+        font-size: 2rem;
+        
     }
 
     .logo > p {
         font-size: 1.4rem;
+        font-weight: normal;
     }
 
     .header{
+        width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-block: 1.5rem;
+        padding: 1rem;
     }
-
-    @media
 
 </style>

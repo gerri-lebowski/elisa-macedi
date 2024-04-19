@@ -2,17 +2,22 @@
 :root {
     
     /* Color */
-    --primary: #EEC442;
+    --primary: #E1AF14;
+    --primary-50: #E8B515;
     --secondary: #171306;
     --white: #fff;
+    --light-bg: #FCF5DE;
     --link: var(--primary);
 
     /* Text */
-    --text-xsmall: clamp(12px, 2vw, 16px); 
-    --text-small: clamp(14px, 2vw, 18px); 
-    --text-medium: clamp(18px, 2.5vw, 24px); 
-    --text-large: clamp(24px, 3vw, 32px); 
-    --text-xlarge: clamp(32px, 3.5vw, 40px); 
+    --text-xs: clamp(1.4rem, 1.5vw, 1.6rem); 
+    --text-sm: clamp(1.6rem, 1.8vw, 1.8rem); 
+    --text-md: clamp(2rem, 2vw, 2.5rem); 
+    --text-lg: clamp(3rem, 3.5vw, 5rem); 
+    --text-xl: clamp(4rem, 3vw, 4.5rem); 
+    --text-xxl: clamp(5rem, 3.5vw, 6rem);
+    
+    
     /* Spacing */
     --space-xs: clamp(0.25rem, 1vw, 0.5rem);
     --space-sm: clamp(0.5rem, 1.5vw, 1rem); 
@@ -24,29 +29,45 @@
 
 /* Fonts */ 
 
+/* Cardo Fonts */
+/* Cardo Fonts */
 @font-face {
-    font-family: 'Inter';
-    src: url('../public/fonts/Inter-Bold.ttf') format('ttf');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-  }
+  font-family: 'Cardo';
+  src: url('/fonts/Cardo-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
-  @font-face {
-    font-family: 'Inter';
-    src: url('../public/fonts/Inter-Light.ttf') format('ttf');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-  }
+@font-face {
+  font-family: 'Cardo';
+  src: url('/fonts/Cardo-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
 
-  @font-face {
-    font-family: 'Inter';
-    src: url('../public/fonts/Inter-Regular.ttf') format('ttf');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
+@font-face {
+  font-family: 'Cardo';
+  src: url('/fonts/Cardo-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* Jost Fonts */
+@font-face {
+  font-family: 'Jost';
+  src: url('/fonts/Jost-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('/fonts/Jost-SemiBold.ttf') format('truetype');
+  font-weight: 600; /* SemiBold */
+  font-style: normal;
+}
+
+
 
 /* Normalize CSS */
 
@@ -70,13 +91,16 @@ body {
 	margin: 0;
 }
 
-h1 {font-size: var(--text-xlarge); font-weight: bold;}
-h2 {font-size: var(--text-large);}
-h3 {font-size: var(--text-medium);}
-p  {font-size: var(--text-small); }
+h1 {font-family: 'Cardo', serif; font-size: var(--text-xxl); font-weight: normal;}
+h2 {font-family: 'Cardo', serif; font-size: var(--text-xl); font-weight: normal; color: var(--primary);}
+h3 {font-family: 'Jost', sans-serif; font-size: var(--text-md); text-transform: uppercase; font-weight: normal; color: var(--primary);}
+p  {font-family: 'Jost', sans-serif;font-size: var(--text-xs); }
 
 a { font-size: 1.5rem;text-decoration: none; color: var(--link); }
+a:hover { color: var(--primary-50); }
+label{ font-family: 'Jost', sans-serif; font-size: var(--text-xs); }
 
 section {margin-block: 3rem;}
 .container { width: min(100% - 4rem, 120rem); margin-inline: auto; }
 .two-columns {display: grid; grid-template-columns: repeat(auto-fit,minmax(20rem, 1fr));}
+.btn-light { padding: 1rem 6rem; border: none; border-radius: .25rem; background: var(--primary); width: max-content; }
