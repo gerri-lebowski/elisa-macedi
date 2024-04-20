@@ -1,27 +1,6 @@
 ---
 import Form from "./Form.astro";
 
-const footerMenu: Menu[] = [
-
-    {
-        label: "Chi sono",
-        href: "/chi-sono",
-    },
-    {
-        label: "Cultura Dieta",
-        href: "/cultura",
-    },
-    {
-        label: "Percorsi",
-        href: "/percorsi",
-    },
-    {
-        label: "Prenota",
-        href: "/prenota"
-    },
-
-];
-
 ---
 
 <footer>
@@ -40,26 +19,25 @@ const footerMenu: Menu[] = [
             <h3>Dott.ssa Elisa Macedi</h3>
             <p>Biologa Nutrizionista</p>
             <p>Indirizzo</p>
-            <p>Telefono</p>
             </div>
 
             <div class="col">
                 <h3>Mappa del sito</h3>
                 <ul class="footer-menu">
-                    {footerMenu.map((item, index) => (
-                        <li class="menu-item"><a href={item.href} target={item.external ? "_blank" : "" } rel={item.external ? "noopener" : "" }>
-                          {item.label}
-                        </a></li>
-                        ))}
+                    <li><a href="/cultura-dieta">Cultura dieta</a></li>
+                    <li><a href="/disturbi-alimentari">Disturbi Alimentari</a></li>
+                    <li><a href="/benessere-donna">Benessere Donna</a></li>
+                    <li><a href="/privacy-policy">Privacy Policy</a></li>
+                    <li><a href="/cookie-policy">Cookie Policy</a></li>
+                    
                 </ul>
-
-            <div class="col">
-                <h3>Dott.ssa Elisa Macedi</h3>
-                <p>Biologa Nutrizionista</p>
-                <p>Indirizzo</p>
-                <p>Telefono</p>
             </div>
-    </div>
+            <div class="col">
+                <h3>Contatti</h3>
+                <p>email: </p>
+                <p>Telefono: </p>
+            </div>
+    
 </footer>
 
 <style>
@@ -75,21 +53,25 @@ const footerMenu: Menu[] = [
         
     }
 
-    .footer-menu {
-        display: flex; 
-        flex-direction: column; 
-        margin: 0;
-        align-items: flex-start;
+    ul {
+        padding: 0;
     }
 
-    .footer-menu > li,
-    .footer-menu > a {
-
+    .footer-menu {
         list-style-type: none;
-        color: var(--white);
-        line-height: 1.7em;
-        font-family: 'Jost', sans-serif;
-        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .footer-menu > li > a{
+        font-family: 'jost', sans-serif;
+        color: white;
+    }
+
+    .footer-menu > a {
+        color: white;
+        
     }
 
 

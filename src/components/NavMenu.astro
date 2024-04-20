@@ -13,6 +13,16 @@ const navmenu: Menu[] = [
     {
         label: "Percorsi",
         href: "#",
+        items: [
+            {
+                label: "Disturbi alimentari",
+                href: "/disturbi-alimentari",
+            },
+            {
+                label: "Benessere donna",
+                href: "/benessere-donna",
+            },
+        ]
     },
     {
         label: "Prenota",
@@ -26,11 +36,31 @@ const navmenu: Menu[] = [
 <nav>
 
 <ul class="menu off-screen-menu">
+    
     {navmenu.map((item, index) => (
-        <li class="menu-item"><a href={item.href} target={item.external ? "_blank" : "" } rel={item.external ? "noopener" : "" }>
+        <li class="menu-item" id={item.label === "Percorsi" ? "percorsi-item" : undefined}><a href={item.href} target={item.external ? "_blank" : "" } rel={item.external ? "noopener" : "" }>
           {item.label}
-        </a></li>
+        </a>
+
+        <!-- Dropdown -->
+        {item.label === "Percorsi" && (
+        <ul class="dropdown-menu">
+            {navmenu[2].items.map((subItem, subIndex) => (
+                <li class="dropdown-menu__item">
+                    
+                    <a href={subItem.href}>
+                        {subItem.label}
+                        </a>
+                    
+                    </li>
+            )
+        )}
+        </ul>
+        )} 
+            
+        </li>
         ))}
+
 </ul>
 
 <!-- mobile menu -->
@@ -53,14 +83,41 @@ class="ham-menu">
         list-style-type: none;
         align-items: left;
         gap: 4rem;
+        position: relative;
     }
 
     .menu-item a{
         text-decoration: none;
         font-size: var(--text-xs);
+        
     } 
 
+
+    /* Dropdown menu*/
+    .dropdown-menu {
+        background: var(--light-bg);
+        border-radius: .5rem;
+        list-style-type: none;
+        margin-top: 10px;
+        padding-inline: 1.5rem;
+        padding-block: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: .5em;
+        position: absolute;
+        opacity: 0;
+        transition: opacity 150ms ease-in-out;
+
     
+    }
+
+    .dropdown-menu.active {
+        opacity: 1;
+    }
+
+    .dropdown-menu > li > a {
+        font-size: 1.4rem;        
+    }
 
     
 
@@ -86,11 +143,11 @@ class="ham-menu">
         
     }
 
-        .off-screen-menu.active {
+    .off-screen-menu.active {
             right: 0;
         }
 
-        .ham-menu {
+    .ham-menu {
             height: 2rem;
             width: 3rem;
             position: relative;
@@ -98,7 +155,7 @@ class="ham-menu">
             text-align: right;
         }
 
-        .ham-menu span {
+    .ham-menu span {
             height: 1.5px;
             width: 90%;
             background: #000;
@@ -109,27 +166,27 @@ class="ham-menu">
             transition: .3 ease;
         }
 
-        .ham-menu span:nth-child(1) {
+    .ham-menu span:nth-child(1) {
             top: 25%;
             transition: .3s ease;
             
 
         }
 
-        .ham-menu span:nth-child(2) {
+    .ham-menu span:nth-child(2) {
             top: 50%;
             transition: .3s ease;
             
         }
 
-        .ham-menu.active span:nth-child(1) {
+    .ham-menu.active span:nth-child(1) {
             top: 50%;
             width: 50%;
             transition: .3s ease;
             transform: translate(-50%, -50%) rotate(45deg);
         }
 
-        .ham-menu.active span:nth-child(2) {
+    .ham-menu.active span:nth-child(2) {
             top: 50%;
             width: 50%;
             transition: .3s ease;
@@ -140,8 +197,27 @@ class="ham-menu">
 
 </style>
 
-<script>
+    <script>
 
+        
+        const dropdownButton = document.querySelector('#percorsi-item');
+        const dropdown = document.querySelector('.dropdown-menu')  
+
+        dropdownButton.addEventListener('click', (event) => {
+           
+            event.stopPropagation();
+            dropdown.classList.toggle("active");
+        
+        })
+          
+        document.addEventListener('click', function(e) {
+            const isClickedInsideDropdown = dropdown.contains(e.target);
+            if (!isClickedInsideDropdown) {
+                dropdown.classList.remove("active");
+            } 
+        });
+
+        
         const hamMenus = document.querySelectorAll('div.ham-menu');
         const offScreenMenus = document.querySelectorAll('ul.off-screen-menu');
 
@@ -150,8 +226,10 @@ class="ham-menu">
             hamMenu.classList.toggle('active');
             offScreenMenus[index].classList.toggle('active');
             console.log('button was clicked');
-    });
-});
+        });
+        });
 
 
-</script>
+
+
+    </script>
