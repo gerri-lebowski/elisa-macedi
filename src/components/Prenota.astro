@@ -1,0 +1,82 @@
+---
+---
+
+<section>
+    <div class="container title-center">
+        <h2>Prenota</h2>
+    </div>
+        <div class="container book">
+            
+                <div class="online-meet">
+                    <img src="/media/sedute-online.svg" alt="Prenota Online" class="book__icon">
+                    <div class="online-meet__body">
+                        <h4>Online</h4>
+                        <p>Compila il form e inizia il tuo percorso</p>
+                        <a class="btn-sm" href="/prenota">Contattami</a>
+                    </div>
+                </div>
+
+                <div class="offline-meet">
+                    <img src="/media/sedute-offline.svg" alt="Prenota Online" class="book__icon">
+                    <div class="online-meet__body">
+                        <h4>Offline</h4>
+                        <p>Compila il form e inizia il tuo percorso</p>
+                        <a class="btn-sm" href="/prenota">Contattami</a>
+                    </div>
+                </div>
+            
+            
+            
+
+        </div>
+    
+</section>
+
+<style>
+
+    .title-center {
+        text-align: center;
+    }
+    
+    .book {
+        display: flex;
+        justify-content: space-around;
+        padding-block: 2rem;
+        flex-wrap: wrap;
+        gap: 2em;
+    }
+
+    .online-meet, .offline-meet {
+        display: flex;
+        width: 50rem;
+        gap: 1em;
+        padding: 2em;
+        border-radius: .5em;
+    }
+
+    .online-meet__body, .offline-meet__body {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .online-meet {
+        background: #F0DA97;
+    }
+
+    .offline-meet  {
+        background: var(--primary);
+    }
+
+    .book__icon {
+        width: 8rem;
+    }
+    .btn-sm {
+        width: max-content;
+        padding: .5em;
+        border-radius: .25em;
+        background: #352c13;
+    }
+
+
+</style>

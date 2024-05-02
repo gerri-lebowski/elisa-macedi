@@ -2,8 +2,8 @@
 :root {
     
     /* Color */
-    --primary: #E1AF14;
-    --primary-50: #E8B515;
+    --primary: #DEAB27;
+    --primary-50: #bb8f21;
     --secondary: #171306;
     --white: #fff;
     --light-bg: #FCF5DE;
@@ -87,12 +87,12 @@ html {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Jost', sans-serif;
 	margin: 0;
 }
 
-h1 {font-family: 'Cardo', serif; font-size: var(--text-xxl); font-weight: normal;}
-h2 {font-family: 'Cardo', serif; font-size: var(--text-xl); font-weight: normal; color: var(--primary);}
+h1 {font-family: 'Jost', sans-serif; font-size: var(--text-xxl); font-weight: normal;}
+h2 {font-family: 'Jost', sans-serif; font-size: var(--text-xl); font-weight: normal; color: var(--primary);}
 h3 {font-family: 'Jost', sans-serif; font-size: var(--text-md); text-transform: uppercase; font-weight: normal; color: var(--primary);}
 p  {font-family: 'Jost', sans-serif;font-size: var(--text-xs); }
 
