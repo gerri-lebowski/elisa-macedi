@@ -1,0 +1,60 @@
+---
+import SinglePage from "../layouts/SinglePage.astro";
+import Form from "../components/Form.astro";
+---
+
+<SinglePage title="Prenota">
+    
+    <section>
+        <div class="container">
+    
+            <div class="intestazione">
+                <h2>Inizia il tuo percorso, e ritrova il benessere</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus quod quos perferendis?
+                </p>
+            </div>
+            
+        </div>
+    </section>
+    
+    <section>
+        <div class="container prenota">
+            <div class="studio">
+                <h3>Contattami</h3>
+                <p>Informazioni studio</p>
+            </div>
+            <div class="form">
+                <Form></Form>
+            </div>
+        </div>
+    </section>
+    
+
+
+</SinglePage>
+
+    
+	
+
+<style>
+    .prenota {
+        background: #FCF5DE;
+        padding: 3rem;
+        border-radius: .25em;
+    }
+    .intestazione {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .studio {
+        display: flex;
+        flex-direction: column;
+        padding-block: 2rem;
+        text-align: center;
+        gap: 1rem;
+    }
+
+</style>

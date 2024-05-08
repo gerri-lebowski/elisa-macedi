@@ -1,37 +1,35 @@
 ---
-import BasicLayout from "../layouts/BasicLayout.astro";
-
+import SinglePage from "../layouts/SinglePage.astro";
+import Prenota from "../components/Prenota.astro";
 ---
 
-<BasicLayout title="Percorsi">	
-
+<SinglePage title="Disturbi alimentari">
+    
     <div class="container">
-        <div class="card__wrapper">
-            
-            <a href="#" class="card">
-                
-                <img class="card__img" src="/media/segnaposto.webp" alt=""
-                transition:name="img"
-                />
-
-                <p class="card__title">Titolo card</p>
-            </a>
+    
+        <div class="services">
+            <h2>Descrizione del percorso</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus quod quos perferendis?
+            </p>
+        </div>
+        
     </div>
-	
-</BasicLayout>
+    <Prenota>
+        
+    </Prenota>
+</SinglePage>
 
+    
+	
 
 <style>
 
-    .card {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
-        
-    }
-
-    .card__img {
-        width: 100%;
-
+    .services{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-block: 5rem;
     }
 
 </style>
