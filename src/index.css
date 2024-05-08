@@ -29,29 +29,6 @@
 
 /* Fonts */ 
 
-/* Cardo Fonts */
-/* Cardo Fonts */
-@font-face {
-  font-family: 'Cardo';
-  src: url('/fonts/Cardo-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Cardo';
-  src: url('/fonts/Cardo-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Cardo';
-  src: url('/fonts/Cardo-Italic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-}
-
 /* Jost Fonts */
 @font-face {
   font-family: 'Jost';
@@ -63,7 +40,14 @@
 @font-face {
   font-family: 'Jost';
   src: url('/fonts/Jost-SemiBold.ttf') format('truetype');
-  font-weight: 600; /* SemiBold */
+  font-weight: 600; 
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'co-headline';
+  src: url('/fonts/CoHead.ttf') format('truetype');
+  font-weight: 400; 
   font-style: normal;
 }
 
@@ -91,9 +75,9 @@ body {
 	margin: 0;
 }
 
-h1 {font-family: 'Jost', sans-serif; font-size: var(--text-xxl); font-weight: normal;}
-h2 {font-family: 'Jost', sans-serif; font-size: var(--text-xl); font-weight: normal; color: var(--primary);}
-h3 {font-family: 'Jost', sans-serif; font-size: var(--text-md); text-transform: uppercase; font-weight: normal; color: var(--primary);}
+h1 {font-family: 'co-headline', sans-serif; font-size: var(--text-xxl); font-weight: normal;}
+h2 {font-family: 'co-headline', sans-serif; font-size: var(--text-xl); font-weight: normal; color: var(--primary);}
+h3 {font-family: 'co-headline', sans-serif; font-size: var(--text-md); text-transform: uppercase; font-weight: normal; color: var(--primary);}
 p  {font-family: 'Jost', sans-serif;font-size: var(--text-xs); }
 
 a { font-size: 1.5rem;text-decoration: none; color: var(--link); }

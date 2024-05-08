@@ -1,8 +1,16 @@
 ---
-import BasicLayout from "../layouts/BasicLayout.astro";
+import SinglePage from "../layouts/SinglePage.astro"
 
 ---
+<SinglePage title="Cultura Dieta">
+    <div class="container cultura-dieta">
+        <h2>Titolo</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo ex quia nisi!</p>
+    </div>
+</SinglePage>
 
-<BasicLayout title="Cultura">	
-	
-</BasicLayout>
+<style>
+    .cultura-dieta {
+        margin-block: 5rem;
+    }
+</style>

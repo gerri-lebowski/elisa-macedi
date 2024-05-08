@@ -12,11 +12,40 @@ import SinglePage from "../layouts/SinglePage.astro"
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut reprehenderit tempore maxime ut sequi rerum.</p>
                 </div>
                 <div class="about__img">
-                    <img src="" alt="">
+                    <img src="media/elisa-maced-biologa-nutrizionista.jpg" alt="">
                 </div>
             </div>
         </div>
     </section>
 </SinglePage>
 
+<style>
+    .about {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
 
+    .about__content, .about__img {
+        width: 49%;
+    }
+
+    .about__content {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .about__img > img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: .25em;
+    }
+
+    @media screen(max-width: 728px;) {
+        .about__content, .about__img {
+        width: 100%;
+    }
+    }
+</style>
