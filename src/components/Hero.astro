@@ -5,15 +5,22 @@
 <section>
     <div class="container">
         <div class="hero"> 
-            <h1>Biologa Nutrizionista specializzata in <strong>Disturbi alimentari</strong>, <strong>Amenorrea Ipotalamica</strong> e
-                <strong>  Sindrome dell'Ovaio Policistico  </strong></h1>
-            <a href="/prenota" class="btn-light">Prenota</a>
+            <div class="hero__content">
+                <h1 class="title">Biologa Nutrizionista specializzata in <strong>Disturbi alimentari</strong>, <strong>Amenorrea Ipotalamica</strong> e
+                    <strong>Sindrome dell'Ovaio Policistico</strong></h1>
+                <a href="/prenota" class="btn-light">Prenota</a>
+            </div>
+            <div class="hero__img">
+                <img src="media/elisa-maced-biologa-nutrizionista.jpg" alt="">
+            </div>
+            
         </div>
     </div>	
 </section>
 
 <style>
-
+    section {margin-block: 0;}
+    .container {background: #FCF5DE;width: 100%;}
     a.btn-light {
         font-family: 'Jost', sans-serif;
         font-size: var(--text-md);
@@ -23,18 +30,34 @@
 
     .hero {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
         align-items: center;
         gap: 2rem;
-        padding-block: var(--space-xxl);
-        height: 70rem;
-        text-align: center;
+        
     }
 
-    .hero > h1 > strong  {
+    .hero__content {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 60%;
+        padding-inline: 4rem;
+        
+    }
+
+    .hero__img {
+        width: 40%;
+        filter: grayscale(100%);
+    }
+    
+
+    .title {
+        font-size: 5rem;
+    }
+
+    .title > strong  {
         font-weight: normal;
         color: var(--primary);
+        
     }
     
 </style>

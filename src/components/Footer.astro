@@ -1,5 +1,4 @@
 ---
-import Form from "./Form.astro";
 
 ---
 
@@ -42,14 +41,18 @@ import Form from "./Form.astro";
 
 <style>
 
+    footer {
+        margin: 0;
+    }
 
     .footer-content {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
         width: 100%;
-        padding-inline: 1rem;
+        padding-inline: 2rem;
         min-height: 30rem;
         background: var(--primary);
+        margin: 0;
         
     }
 
@@ -75,7 +78,7 @@ import Form from "./Form.astro";
     }
 
 
-    h3 {color: var(--white); font-family: 'Card', serif; text-transform: none;}
+    h3 {color: var(--white);}
     p {color: var(--white); }
 
     .col {

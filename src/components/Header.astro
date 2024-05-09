@@ -5,7 +5,7 @@ import NavMenu from "./NavMenu.astro";
 
 <header>
     <div class="header">
-        <a href="/" class="logo"> <img src="/media/logo.png" alt=""> </a>
+        <a href="/" class="logo"><img src="/media/logo.png" alt=""></a>
         <NavMenu />
     </div>
 </header>
@@ -13,13 +13,9 @@ import NavMenu from "./NavMenu.astro";
 
 <style>
 
-    .logo {
-        font-family: 'Cardo', serif;
-        color: var(--primary);
-        font-size: 2rem;
-        
+    .logo > img {
+        width: 20rem;
     }
-
     .logo > p {
         font-size: 1.4rem;
         font-weight: normal;
@@ -30,6 +26,7 @@ import NavMenu from "./NavMenu.astro";
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding-inline: 2rem;
         
     }
 
