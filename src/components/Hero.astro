@@ -3,8 +3,10 @@
 ---
 
 <section>
+    
     <div class="container">
         <div class="hero"> 
+
             <div class="hero__content">
                 <h1 class="title">Biologa Nutrizionista specializzata in <strong>Disturbi alimentari</strong>, <strong>Amenorrea Ipotalamica</strong> e
                     <strong>Sindrome dell'Ovaio Policistico</strong></h1>
@@ -13,9 +15,9 @@
             <div class="hero__img">
                 <img src="media/elisa-maced-biologa-nutrizionista.jpg" alt="">
             </div>
-            
         </div>
-    </div>	
+    </div>
+
 </section>
 
 <style>
@@ -29,29 +31,33 @@
     }
 
     .hero {
+        
         display: flex;
         align-items: center;
-        gap: 2rem;
-        
+        flex-wrap: wrap;
     }
 
     .hero__content {
+        width: 100%;
         display: flex;
         flex-direction: column;
         gap: 2rem;
-        width: 60%;
-        padding-inline: 4rem;
+        padding: 4rem;
         
     }
 
     .hero__img {
-        width: 40%;
+        width: 100%;
         filter: grayscale(100%);
+    }
+
+    .hero__img > img {
+        width: 100%;
     }
     
 
     .title {
-        font-size: 5rem;
+        font-size: var(--text-xl);
     }
 
     .title > strong  {
@@ -59,5 +65,11 @@
         color: var(--primary);
         
     }
+
+    @media (min-width:768px) {
+    .hero__content, .hero__img {
+        width:50%;
+    }
+}
     
 </style>
