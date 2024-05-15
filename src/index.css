@@ -71,20 +71,17 @@ html {
 }
 
 body {
-  font-family: 'Jost', sans-serif;
 	margin: 0;
 }
 
 h1 {font-family: 'co-headline', sans-serif; font-size: var(--text-xxl); font-weight: normal;}
 h2 {font-family: 'co-headline', sans-serif; font-size: var(--text-xl); font-weight: normal; color: var(--primary);}
 h3 {font-family: 'co-headline', sans-serif; font-size: var(--text-md); text-transform: uppercase; font-weight: normal; color: var(--primary);}
-p  {font-family: 'Jost', sans-serif;font-size: var(--text-xs); }
+p  {font-family: 'Jost', sans-serif;font-size: var(--text-xs); line-height: 1.3em; }
 
 a { font-size: 1.5rem;text-decoration: none; color: var(--link); }
 a:hover { color: var(--primary-50); }
 label{ font-family: 'Jost', sans-serif; font-size: var(--text-xs); }
-
-section {margin-block: 3rem;}
 .container { width: min(100% - 4rem, 120rem); margin-inline: auto; }
 .two-columns {display: grid; grid-template-columns: repeat(auto-fit,minmax(20rem, 1fr));}
 .btn-light { padding: 1rem 6rem; border: none; border-radius: .25rem; background: var(--primary); width: max-content; }
