@@ -11,10 +11,10 @@ import SinglePage from "../layouts/SinglePage.astro"
                     
                     <p>
                         Biologa nutrizionista e proprietaria di una palestra; unisco così lavoro, passioni ed interessi. 
-Se da un lato ho sempre voluto studiare biologia per inseguire il mio sogno di diventare ricercatrice, dall’altro cresceva il desiderio di iscrivermi a psicologia per la mia curiosità verso la mente umana…un bivio un po’ particolare perché queste due grandi vie , apparentemente così distanti, ho scoperto poi che nella realtà si incrociano più di quanto si possa credere! 
-Ho trovato un bellissimo punto di incontro tra questi due mondi proprio nella nutrizione perché nutrirsi non è solo quanto o cosa si mangia, ma è prendersi cura di se stessi, è salute ed è fondamentale considerare la parte psicologica, emotiva e sociale che c’è dietro al cibo. 
-Vivere il cibo in modo intuitivo e spontaneo significa intrecciare i bisogni del corpo con quelli della mente e delle emozioni, per questo nei percorsi affianco conoscenze e tecniche diverse come strumenti di educazione alimentare, evidenze scientifiche-nutrizionali, la CBT-E, la mindful eating e l’intuitive eating, per rendere il percorso il più possibile cucito sulle caratteristiche e peculiarità del singolo.
-La scelta di rilevare o meno il peso e le circonferenze verrà valutata insieme. Generalmente, dove non strettamente necessario, preferisco evitarlo
+            Se da un lato ho sempre voluto studiare biologia per inseguire il mio sogno di diventare ricercatrice, dall’altro cresceva il desiderio di iscrivermi a psicologia per la mia curiosità verso la mente umana…un bivio un po’ particolare perché queste due grandi vie , apparentemente così distanti, ho scoperto poi che nella realtà si incrociano più di quanto si possa credere! 
+            Ho trovato un bellissimo punto di incontro tra questi due mondi proprio nella nutrizione perché nutrirsi non è solo quanto o cosa si mangia, ma è prendersi cura di se stessi, è salute ed è fondamentale considerare la parte psicologica, emotiva e sociale che c’è dietro al cibo. 
+            Vivere il cibo in modo intuitivo e spontaneo significa intrecciare i bisogni del corpo con quelli della mente e delle emozioni, per questo nei percorsi affianco conoscenze e tecniche diverse come strumenti di educazione alimentare, evidenze scientifiche-nutrizionali, la CBT-E, la mindful eating e l’intuitive eating, per rendere il percorso il più possibile cucito sulle caratteristiche e peculiarità del singolo.
+        La scelta di rilevare o meno il peso e le circonferenze verrà valutata insieme. Generalmente, dove non strettamente necessario, preferisco evitarlo
                     </p>
                 </div>
                 <div class="about__img">
@@ -27,18 +27,17 @@ La scelta di rilevare o meno il peso e le circonferenze verrà valutata insieme.
 
 <style>
     .about {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
         flex-wrap: wrap;
-        gap: 2rem;
-    }
-
-    .about__content, .about__img {
-        width: 49%;
+        gap: 4rem;
+        margin-block: 3rem;
     }
 
     .about__content {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         gap: 1rem;
         line-height: 2.5em;
     }
@@ -48,11 +47,5 @@ La scelta di rilevare o meno il peso e le circonferenze verrà valutata insieme.
         height: auto;
         object-fit: cover;
         border-radius: .25em;
-    }
-
-    @media screen(max-width: 728px;) {
-        .about__content, .about__img {
-        width: 100%;
-    }
     }
 </style>
