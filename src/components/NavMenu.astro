@@ -64,21 +64,17 @@ const navmenu: Menu[] = [
 </ul>
 
 <!-- mobile menu -->
+
 <div
 class="ham-menu">
-
     <span></span>
     <span></span>
-    
 </div>
-
 </nav>
 
 <style>
 
     /* DESKTOP */
-
-    
 
     .menu{
         display: flex;
@@ -92,8 +88,17 @@ class="ham-menu">
     .menu-item a{
         text-decoration: none;
         font-size: var(--text-xs);
+        color: #fff;
+        padding: .5em;
+        border-radius: .25em;
+        transition: all .5s;
         
     } 
+
+    .menu-item a:hover {
+        background-color: var(--primary-50);
+        
+    }
 
 
     /* Dropdown menu*/
@@ -149,7 +154,6 @@ class="ham-menu">
     }
 
     .off-screen-menu.active {
-        bottom: 0;
             right: 0;
             min-height: 100vh;
             height: 100vh;
@@ -205,36 +209,34 @@ class="ham-menu">
 
 <script>
     
-    const dropdownButton = document.querySelector('#percorsi-item');
-        const dropdown = document.querySelector('.dropdown-menu')  
+        const dropdownButton = document.querySelector('#percorsi-item');
+            const dropdown = document.querySelector('.dropdown-menu')  
 
-        dropdownButton.addEventListener('click', (event) => {
-           
-            event.stopPropagation();
-            dropdown.classList.toggle("active");
-        
-        })
-          
-        document.addEventListener('click', function(e) {
-            const isClickedInsideDropdown = dropdown.contains(e.target);
-            if (!isClickedInsideDropdown) {
-                dropdown.classList.remove("active");
-            } 
-        });
+            dropdownButton.addEventListener('click', (event) => {
+            
+                event.stopPropagation();
+                dropdown.classList.toggle("active");
+            
+            })
+            
+            document.addEventListener('click', function(e) {
+                const isClickedInsideDropdown = dropdown.contains(e.target);
+                if (!isClickedInsideDropdown) {
+                    dropdown.classList.remove("active");
+                } 
+            });
 
-        
-        const hamMenus = document.querySelectorAll('div.ham-menu');
-        const offScreenMenus = document.querySelectorAll('ul.off-screen-menu');
+            
+            const hamMenus = document.querySelectorAll('div.ham-menu');
+            const offScreenMenus = document.querySelectorAll('ul.off-screen-menu');
 
-        hamMenus.forEach((hamMenu, index) => {
-        hamMenu.addEventListener('click', () => {
-            hamMenu.classList.toggle('active');
-            offScreenMenus[index].classList.toggle('active');
-            console.log('button was clicked');
-        });
-        });
-
-
+            hamMenus.forEach((hamMenu, index) => {
+            hamMenu.addEventListener('click', () => {
+                hamMenu.classList.toggle('active');
+                offScreenMenus[index].classList.toggle('active');
+                console.log('button was clicked');
+            });
+            });
 
 
 

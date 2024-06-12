@@ -10,13 +10,13 @@
         </div>
         <div class="card__wrapper">
             
-            <a href="/benessere-donna" class="card">
-                <img class="card__img" src="/media/segnaposto.webp" alt="" >
+            <a href="/benessere-donna/" class="card">
+                <img class="card__img" src="/media/percorso-donna.jpg" alt="" >
                 <p class="card__title">benessere donna</p>
             </a>
 
-            <a href="/disturbi-alimentari" class="card">
-                <img class="card__img" src="/media/segnaposto.webp" alt="" transition:name="img" transition:persist>
+            <a href="/disturbi-alimentari/" class="card">
+                <img class="card__img" src="/media/disturbi-alimentari.jpg" alt="" transition:name="img" transition:persist>
                 <p class="card__title">disturbi alimentari</p>
             </a>
     
@@ -69,24 +69,31 @@
         z-index: 1;
     }
 
-    
-
     .card__img {
         width: 100%;
-        height: auto;
+        height: 50rem;
         object-fit: cover;
     }
 
     .card__title {
         position: absolute;
-        bottom: 0;
+        bottom: 10%;
         left: 50%;
         transform: translate(-50%);
         margin-bottom: 1em;
-        font-size: var(--text-md);
+        font-size: var(--text-lg);
+        text-transform: uppercase;
         font-weight: bold;
         z-index: 2;
-        color: var(--white)
+        color: var(--white);
+        padding: .5em;
+        border-radius: .15em;
+        transition: all 1s;
+    }
+
+    .card__title:hover {
+        background-color: var(--primary);
+        scale: 1.1;
     }
 
 </style>
