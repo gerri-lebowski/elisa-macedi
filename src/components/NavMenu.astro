@@ -97,25 +97,24 @@ class="ham-menu">
 
     .menu-item a:hover {
         background-color: var(--primary-50);
-        
     }
 
 
     /* Dropdown menu*/
     .dropdown-menu {
         background: var(--light-bg);
+        border: .5px solid var(--primary-50);
         border-radius: .5rem;
         list-style-type: none;
-        margin-top: 10px;
-        padding-inline: 1.5rem;
-        padding-block: 1.5rem;
+        padding-inline: 1em;
+        padding-block: 2em;
         display: flex;
         flex-direction: column;
-        gap: .5em;
+        gap: 2em;
         position: absolute;
         opacity: 0;
         transition: opacity 150ms ease-in-out;
-
+        margin-top: 2em;
     
     }
 
@@ -125,7 +124,12 @@ class="ham-menu">
     }
 
     .dropdown-menu > li > a {
-        font-size: 1.4rem;        
+        font-size: 1.6rem; 
+        color: var(--primary);       
+    }
+
+    .dropdown-menu > li > a:hover {
+        background-color: transparent;       
     }
 
     
@@ -142,7 +146,6 @@ class="ham-menu">
         position: absolute;
         top: 0;
         right: -100%;
-
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -150,6 +153,7 @@ class="ham-menu">
         gap: 3rem;
         transition: all .5s cubic-bezier(.215, .61, .355, 1);
         z-index: 998;
+        margin-top: 0;
         
     }
 
@@ -158,6 +162,19 @@ class="ham-menu">
             min-height: 100vh;
             height: 100vh;
         }
+
+        .menu-item a{
+        text-decoration: none;
+        font-size: var(--text-xs);
+        color: var(--primary);
+        padding: .5em;
+        border-radius: .25em;
+        transition: all .5s;
+    } 
+
+    .menu-item a:hover {
+        color: #fff;
+    }
 
     .ham-menu {
             height: 2rem;
@@ -171,7 +188,7 @@ class="ham-menu">
     .ham-menu span {
             height: 1.5px;
             width: 90%;
-            background: #000;
+            background: var(--light-bg);
             position: absolute;
             top: 50%;
             right: 0;
@@ -202,6 +219,14 @@ class="ham-menu">
             transition: .3s ease;
             transform: translate(-50%, -50%) rotate(-45deg);
         }
+    
+    .dropdown-menu {
+        margin-right: 1rem;
+        gap: 1em;
+        margin-inline: 1em;
+        left: 0;
+        
+    }
 
 }
 
