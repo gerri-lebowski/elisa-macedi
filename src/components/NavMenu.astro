@@ -225,12 +225,18 @@ class="ham-menu">
         }
     
     .dropdown-menu {
-        margin-right: 1rem;
+        position: static;
+        display: none;
         gap: 1em;
-        margin-inline: 1em;
-        left: 0;
-        
+        height: 0;   
     }
+
+    .dropdown-menu.active {
+        height: fit-content;
+        display: block;
+    }
+
+    #percorsi-item {text-align: center}
 
 }
 
