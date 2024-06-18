@@ -10,10 +10,10 @@
     --link: var(--primary);
 
     /* Text */
-    --text-xs: 1.4rem; 
-    --text-sm: 1.6rem; 
-    --text-md: 1.8rem; 
-    --text-lg: 2rem; 
+    --text-xs: 1.5rem; 
+    --text-sm: 1.8rem; 
+    --text-md: 2rem; 
+    --text-lg: 2.2rem; 
     --text-xl: 2.5rem; 
     --text-xxl: 3rem;
     
@@ -30,8 +30,8 @@
 
     --text-xs: 1.6rem; 
     --text-sm: 1.8rem; 
-    --text-md: 2rem; 
-    --text-lg: 2.5rem; 
+    --text-md: 2.2rem; 
+    --text-lg: 2.7rem; 
     --text-xl: 3.5rem; 
     --text-xxl: 6rem;
 
