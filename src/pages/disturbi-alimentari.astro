@@ -1,43 +1,127 @@
 ---
-import SinglePage from "../layouts/SinglePage.astro";
+import BasicLayout from "../layouts/BasicLayout.astro";
 import Prenota from "../components/Prenota.astro";
 ---
 
-<SinglePage title="Disturbi alimentari">
+<BasicLayout title="Disturbi alimentari">
     
-    <div class="container">
+    <div class="container services">
     
-        <div class="services">
-            <h2>Descrizione del percorso</h2>
-            <p>
-                Il cibo può essere un’arma a doppio taglio…invece che supporto e cura può diventare ossessione e controllo.
-                I disturbi alimentari sono malattie complesse e multifattoriali. Spesso si manifestano diversamente da come li immaginiamo, non hanno un’unica forma o un volto ben riconoscibile. 
-                Il meccanismo di queste malattie non può interrompersi da solo, la forza di volontà non è sufficiente. I sintomi del disturbo influenzano fortemente il valore che si da a se stessi ed è per questo che c’è sicuramente bisogno di tanta energia per combatterli, ma è necessario avere un’equipe che ti accompagni in questo percorso.
-                Indipendentemente dal tuo peso, se il tuo corpo mostra o meno la tua sofferenza, se hai o meno ricevuto una diagnosi, le tue difficoltà meritano attenzione e un luogo di cura e ascolto non giudicante.
-                Ogni passo sarà condiviso. Nel rispetto dei tuoi tempi e delle tue preoccupazioni, recupereremo un rapporto di fiducia con il corpo ed equilibrio con il cibo. Capiremo insieme in che modo posso aiutarti per ritrovare serenità, libertà e cura verso di te.
-                I disturbi alimentari sono dolorosi e complessi non solo per chi ne soffre, ma anche per chi ne è vicino. Se pensi che una persona a te cara stia attraversando un periodo difficile e vuoi capire come aiutarla, contattami. Ne parleremo insieme e ti supporterò.
-                <br>Primo colloquio: durata 75-90 minuti. <br>Costo 100 euro 
-                <br>Incontri successivi: durata 45-60 minuti. <br>Costo 50 euro
-                <br>La frequenza e la durata degli incontri sarà adattata alle necessità del percorso e stabilita di comune accordo.
-            </p>
+        
+            <div class="services__img">
+                <img src="media/disturbi-alimentari.jpg" alt="">
+            </div>
+
+            <div class="services__description">
+                <div class="breadcrumbs"><a href="/"><p>Home</p></a> <p>/ Distrubi alimentari</p></div>
+                <h1 class="program-title">Descrizione del percorso<br>Disturbi alimentari</h1>
+                
+                <p>
+                    Il cibo può essere un’arma a doppio taglio…invece che supporto e cura può diventare ossessione e controllo.
+                    I disturbi alimentari sono malattie complesse e multifattoriali. Spesso si manifestano diversamente da come li immaginiamo, non hanno un’unica forma o un volto ben riconoscibile. 
+                    Il meccanismo di queste malattie non può interrompersi da solo, la forza di volontà non è sufficiente. I sintomi del disturbo influenzano fortemente il valore che si da a se stessi ed è per questo che c’è sicuramente bisogno di tanta energia per combatterli, ma è necessario avere un’equipe che ti accompagni in questo percorso.
+                    Indipendentemente dal tuo peso, se il tuo corpo mostra o meno la tua sofferenza, se hai o meno ricevuto una diagnosi, le tue difficoltà meritano attenzione e un luogo di cura e ascolto non giudicante.
+                    Ogni passo sarà condiviso. Nel rispetto dei tuoi tempi e delle tue preoccupazioni, recupereremo un rapporto di fiducia con il corpo ed equilibrio con il cibo. Capiremo insieme in che modo posso aiutarti per ritrovare serenità, libertà e cura verso di te.
+                    I disturbi alimentari sono dolorosi e complessi non solo per chi ne soffre, ma anche per chi ne è vicino. Se pensi che una persona a te cara stia attraversando un periodo difficile e vuoi capire come aiutarla, contattami. Ne parleremo insieme e ti supporterò.
+                    
+                </p>
+            </div>
+            
         </div>
         
-    </div>
+    
+
+    <section>
+        <div class="container">
+            <div class="info-tecniche">
+                <h3>Info sul percorso</h3>
+                
+                <div class="one-col border-xs">
+                    <p>Primo colloquio: durata 75-90 minuti.</p><p>Costo 100 euro</p>
+                    
+                </div>
+                
+                <div class="one-col bg-primary">
+                    <p>Incontri successivi: durata 45-60 minuti.</p><p>Costo 50 euro</p>
+                </div>
+                
+                <div class="one-col">
+                    <p>La frequenza e la durata degli incontri sarà adattata alle necessità del percorso e stabilita di comune accordo.</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
     <Prenota>
         
     </Prenota>
-</SinglePage>
-
-    
-	
+</BasicLayout>
 
 <style>
 
+    
     .services{
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr;
+        
+        justify-items: stretch;
+        flex-wrap: wrap;
+        margin-inline: auto;
+
+        @media (min-width: 960px) {
+        grid-template-columns: 1fr 1fr;
+    }
+    }
+
+    
+
+    .services__description {
+        padding: 5em;
         display: flex;
         flex-direction: column;
-        gap: 1rem;
-        margin-block: 5rem;
+        gap: 2em;
+        background: var(--light-bg);
     }
+
+
+    .separator {
+        width: 100%;
+        height: 1px;
+        background-color: var(--primary);
+    }
+
+    .services__img > img{
+        width: auto;
+        height: 100%;
+        object-fit: cover;        
+    }
+
+    .program-title {
+        text-transform: uppercase;
+        font-size: 5rem;
+        line-height: 1.2em;
+        color: var(--primary);
+    }
+    
+    .info-tecniche {
+        padding-block: 5em;
+        display: grid;
+        gap: 1em;
+    }
+
+    .one-col {
+        padding: 2em;
+    }
+
+    .breadcrumbs {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+    }
+    
+
+   
 
 </style>

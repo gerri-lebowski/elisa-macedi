@@ -1,42 +1,120 @@
 ---
-import SinglePage from "../layouts/SinglePage.astro";
+import BasicLayout from "../layouts/BasicLayout.astro";
 import Prenota from "../components/Prenota.astro";
 ---
 
-<SinglePage title="Benessere donna">
+<BasicLayout title="Disturbi alimentari">
     
-    <div class="container">
+    <div class="container services">
     
-        <div class="services">
-            <h2>Descrizione del percorso</h2>
-            <p>
-                Dall’adolescenza alla menopausa il nostro corpo cambia ed è fondamentale ascoltarlo, capirlo ed accoglierlo. 
-                L’equilibrio ormonale di una donna è tanto complesso quanto delicato. A partire dalle scelte alimentari passando per la salute intestinale, per la gestione dello stress e la qualità del sonno, il rapporto mente-cibo-corpo, il modo di vivere lo sport e il movimento, ogni aspetto è fondamentale per il suo mantenimento.
-                In particolare, un’alimentazione flessibile e coltivare un rapporto sereno e di equilibrio con il cibo e il peso può essere di enorme supporto in condizioni quali: 
-                AMENORREA IPOTALAMICA: è l’assenza di ovulazione e di mestruazione causata da un forte stress psico-fisico. Il ciclo mestruale è un indicatore dello stato di salute e di benessere generale della donna, non solo un evento legato alla riproduzione. Una situazione di amenorrea può essere un primo segnale che indica che qualcosa non va come dovrebbe. È una condizione reversibile che necessita di un lavoro multidisciplinare.
-                SINDROME DELL’OVAIO POLICISTICO (PCOS): è un disordine endocrino-metabolico che si può manifestare con un quadro di sintomi differenti, sia per tipologia che per importanza, e l’alimentazione può essere di grande aiuto. La personalizzazione è la chiave.
-                Primo colloquio: durata 75-90 minuti. Costo 100 euro
-                Incontri successivi: durata 45-60 minuti. Costo 50 euro
-                La frequenza e la durata degli incontri sarà adattata alle necessità del percorso e stabilita di comune accordo. 
-            </p>
+        
+            <div class="services__img">
+                <img src="media/benessere-donna.jpg" alt="">
+            </div>
+
+            <div class="services__description">
+                <div class="breadcrumbs"><a href="/"><p>Home</p></a> <p>/ Benessere donna</p></div>
+                <h1 class="program-title">Descrizione del percorso<br>Benessere donna</h1>
+                
+                <p>
+                    Dall’adolescenza alla menopausa il nostro corpo cambia ed è fondamentale ascoltarlo, capirlo ed accoglierlo. L’equilibrio ormonale di una donna è tanto complesso quanto delicato. A partire dalle scelte alimentari passando per la salute intestinale, per la gestione dello stress e la qualità del sonno, il rapporto mente-cibo-corpo, il modo di vivere lo sport e il movimento, ogni aspetto è fondamentale per il suo mantenimento. In particolare, un’alimentazione flessibile e coltivare un rapporto sereno e di equilibrio con il cibo e il peso può essere di enorme supporto in condizioni quali: AMENORREA IPOTALAMICA: è l’assenza di ovulazione e di mestruazione causata da un forte stress psico-fisico. Il ciclo mestruale è un indicatore dello stato di salute e di benessere generale della donna, non solo un evento legato alla riproduzione. Una situazione di amenorrea può essere un primo segnale che indica che qualcosa non va come dovrebbe. È una condizione reversibile che necessita di un lavoro multidisciplinare. SINDROME DELL’OVAIO POLICISTICO (PCOS): è un disordine endocrino-metabolico che si può manifestare con un quadro di sintomi differenti, sia per tipologia che per importanza, e l’alimentazione può essere di grande aiuto. La personalizzazione è la chiave. Primo colloquio: durata 75-90 minuti. Costo 100 euro Incontri successivi: durata 45-60 minuti. Costo 50 euro La frequenza e la durata degli incontri sarà adattata alle necessità del percorso e stabilita di comune accordo.  
+                </p>
+            </div>
+            
         </div>
         
-    </div>
+    
+
+    <section>
+        <div class="container">
+            <div class="info-tecniche">
+                <h3>Info sul percorso</h3>
+                
+                <div class="one-col border-xs">
+                    <p>Primo colloquio: durata 75-90 minuti.</p><p>Costo 100 euro</p>
+                    
+                </div>
+                
+                <div class="one-col bg-primary">
+                    <p>Incontri successivi: durata 45-60 minuti.</p><p>Costo 50 euro</p>
+                </div>
+                
+                <div class="one-col">
+                    <p>La frequenza e la durata degli incontri sarà adattata alle necessità del percorso e stabilita di comune accordo.</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
     <Prenota>
         
     </Prenota>
-</SinglePage>
-
-    
-	
+</BasicLayout>
 
 <style>
 
+    
     .services{
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr;
+        
+        justify-items: stretch;
+        flex-wrap: wrap;
+        margin-inline: auto;
+
+        @media (min-width: 960px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    }
+
+    .services__description {
+        padding: 5em;
         display: flex;
         flex-direction: column;
-        gap: 1rem;
-        margin-block: 5rem;
+        gap: 2em;
+        background: var(--light-bg);
     }
+
+
+    .separator {
+        width: 100%;
+        height: 1px;
+        background-color: var(--primary);
+    }
+
+    .services__img > img{
+        width: auto;
+        height: 100%;
+        object-fit: cover;        
+    }
+
+    .program-title {
+        text-transform: uppercase;
+        font-size: 5rem;
+        line-height: 1.2em;
+        color: var(--primary);
+    }
+    
+    .info-tecniche {
+        padding-block: 5em;
+        display: grid;
+        gap: 1em;
+    }
+
+    .one-col {
+        padding: 2em;
+    }
+
+    .breadcrumbs {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+    }
+    
+
+   
 
 </style>

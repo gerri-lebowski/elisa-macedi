@@ -17,7 +17,7 @@
             <div class="col">
             <h3>Dott.ssa Elisa Macedi</h3>
             <p>Biologa Nutrizionista</p>
-            <p>Indirizzo</p>
+            <p>Via Antonio Cecchi, 30, 61121 Pesaro PU</p>
             </div>
 
             <div class="col">
@@ -31,11 +31,11 @@
                     
                 </ul>
             </div>
-            <div class="col">
+            <!-- <div class="col">
                 <h3>Contatti</h3>
                 <p>email: </p>
                 <p>Telefono: </p>
-            </div>
+            </div> -->
     
 </footer>
 
@@ -43,16 +43,17 @@
 
     footer {
         margin: 0;
+        background: var(--primary);
     }
 
     .footer-content {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5em;
         width: 100%;
-        padding-inline: 2rem;
-        min-height: 30rem;
-        background: var(--primary);
-        margin: 0;
+        padding-inline: 2em;
+        padding-block: 5em;
         
     }
 
@@ -81,13 +82,7 @@
     h3 {color: var(--white);}
     p {color: var(--white); }
 
-    .col {
-
-        display: flex;
-        flex-direction: column;
-        gap: 1em;
-        margin-top: 2em;
-    }
+    
 
 
     .whatsapp-box  {

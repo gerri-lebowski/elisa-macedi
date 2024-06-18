@@ -10,12 +10,12 @@
     --link: var(--primary);
 
     /* Text */
-    --text-xs: clamp(1.4rem, 1.5vw, 1.6rem); 
-    --text-sm: clamp(1.6rem, 1.8vw, 1.8rem); 
-    --text-md: clamp(2rem, 2vw, 2.5rem); 
-    --text-lg: clamp(3rem, 3.5vw, 5rem); 
-    --text-xl: clamp(4rem, 3vw, 4.5rem); 
-    --text-xxl: clamp(5rem, 3.5vw, 6rem);
+    --text-xs: 1.2rem; 
+    --text-sm: 1.4rem; 
+    --text-md: 1.5rem; 
+    --text-lg: 2rem; 
+    --text-xl: 2.5rem; 
+    --text-xxl: 4rem;
     
     
     /* Spacing */
@@ -25,6 +25,17 @@
     --space-lg: clamp(1.5rem, 2.5vw, 2rem); 
     --space-xl: clamp(2rem, 3vw, 2.5rem); 
     --space-xxl: clamp(3rem, 2.8503rem + 0.6387vw, 4rem); 
+
+    @media (min-width: 40em) {
+
+    --text-xs: 1.6rem; 
+    --text-sm: 1.8rem; 
+    --text-md: 2rem; 
+    --text-lg: 2.5rem; 
+    --text-xl: 3.5rem; 
+    --text-xxl: 6rem;
+
+    }
 }
 
 /* Fonts */ 
@@ -81,11 +92,12 @@ main {
 
 img, figure, picture {display: block; max-width: 100%;}
 
-h1,h2,h3,h4,h5 {margin: 0; line-height: 1.5;}
+h1,h2,h3,h4,h5 {margin: 0; line-height: 1.4em;}
 
 h1 {font-family: 'co-headline', sans-serif; font-size: var(--text-xxl); font-weight: normal;}
 h2 {font-family: 'co-headline', sans-serif; font-size: var(--text-xl); font-weight: normal; color: var(--primary);}
 h3 {font-family: 'co-headline', sans-serif; font-size: var(--text-md); text-transform: uppercase; font-weight: normal; color: var(--primary);}
+h4 {font-family: 'co-headline', sans-serif; font-size: var(--text-sm); text-transform: uppercase; font-weight: normal;}
 p  {font-family: 'Jost', sans-serif;font-size: var(--text-xs); line-height: 1.3em; }
 
 a { font-size: 1.5rem;text-decoration: none; color: var(--link); }
@@ -94,7 +106,8 @@ label{ font-family: 'Jost', sans-serif; font-size: var(--text-xs); }
 .container { width: min(100% - 4rem, 120rem); margin-inline: auto; }
 .two-columns {display: grid; grid-template-columns: repeat(auto-fit,minmax(20rem, 1fr));}
 .btn-light { padding: 1rem 6rem; border: none; border-radius: .25rem; background: var(--primary); width: max-content; }
-
+.border-xs{border: 1px solid var(--primary);border-radius: 4px;}
+.bg-primary{background-color: var(--primary); color: white;}
 
 /* -----------
 LENIS & ANIMATIONS
