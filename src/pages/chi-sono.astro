@@ -1,54 +1,114 @@
 ---
-import SinglePage from "../layouts/SinglePage.astro"
-
+import BasicLayout from "../layouts/BasicLayout.astro";
+import Prenota from "../components/Prenota.astro";
+import ProgramCards from "../components/ProgramCards.astro";
 ---
 
-<SinglePage title="Chi sono">
-    <section>
-        <div class="container">
-            <div class="about">
-                <div class="about__content">
-                    
+<BasicLayout title="Chi sono">
+    
+    <div class="container services">
+    
+        
+            
+
+            <div class="services__description">
+                <div class="breadcrumbs"><a href="/"><p>Home</p></a> <p>/ Chi sono</p></div>
+                <h1 class="program-title">Chi sono</h1>
+                
                 <p>
-                        Biologa nutrizionista e proprietaria di una palestra; unisco così lavoro, passioni ed interessi. 
-            Se da un lato ho sempre voluto studiare biologia per inseguire il mio sogno di diventare ricercatrice, dall’altro cresceva il desiderio di iscrivermi a psicologia per la mia curiosità verso la mente umana…un bivio un po’ particolare perché queste due grandi vie , apparentemente così distanti, ho scoperto poi che nella realtà si incrociano più di quanto si possa credere! 
-            Ho trovato un bellissimo punto di incontro tra questi due mondi proprio nella nutrizione perché nutrirsi non è solo quanto o cosa si mangia, ma è prendersi cura di se stessi, è salute ed è fondamentale considerare la parte psicologica, emotiva e sociale che c’è dietro al cibo. 
-            Vivere il cibo in modo intuitivo e spontaneo significa intrecciare i bisogni del corpo con quelli della mente e delle emozioni, per questo nei percorsi affianco conoscenze e tecniche diverse come strumenti di educazione alimentare, evidenze scientifiche-nutrizionali, la CBT-E, la mindful eating e l’intuitive eating, per rendere il percorso il più possibile cucito sulle caratteristiche e peculiarità del singolo.
-        La scelta di rilevare o meno il peso e le circonferenze verrà valutata insieme. Generalmente, dove non strettamente necessario, preferisco evitarlo
-                    </p>
-                </div>
-                <div class="about__img">
-                    <img src="../media/elisa-macedi-chi-sono.jpg" alt="">
-                </div>
+                    Biologa nutrizionista e proprietaria di una palestra;
+                    unisco così lavoro, passioni ed interessi. Se da un lato
+                    ho sempre voluto studiare biologia per inseguire il mio sogno di diventare ricercatrice,
+                    dall’altro cresceva il desiderio di iscrivermi a psicologia per la mia curiosità verso la mente
+                    umana…un bivio un po’ particolare perché queste due grandi vie, apparentemente così distanti,
+                    ho scoperto poi che nella realtà si incrociano più di quanto si possa credere!
+                   <br><br> Ho trovato un bellissimo punto di incontro tra questi due mondi proprio nella
+                    nutrizione perché nutrirsi non è solo quanto o cosa si mangia, ma è prendersi cura di se stessi,
+                    è salute ed è fondamentale considerare la parte psicologica, emotiva e sociale che c’è dietro al cibo.
+                    <br><br>Vivere il cibo in modo intuitivo e spontaneo significa intrecciare i bisogni del corpo con quelli della
+                    mente e delle emozioni, per questo nei percorsi affianco conoscenze e tecniche diverse come strumenti di
+                    educazione alimentare, evidenze scientifiche-nutrizionali, la CBT-E, la mindful eating e l’intuitive eating,
+                    per rendere il percorso il più possibile cucito sulle caratteristiche e peculiarità del singolo.
+                    La scelta di rilevare o meno il peso e le circonferenze verrà valutata insieme. 
+                    Generalmente, dove non strettamente necessario, preferisco evitarlo
+                </p>
             </div>
+
+            <div class="services__img">
+                <img src="../media/elisa-macedi-chi-sono.jpg" alt="">
+            </div>
+            
         </div>
-    </section>
-</SinglePage>
+
+    <ProgramCards></ProgramCards>
+
+    <Prenota></Prenota>
+
+</BasicLayout>
 
 <style>
 
     
-    
-    .about {
+    .services{
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+        width: 100%;
+        grid-template-columns: 1fr;
+        
+        justify-items: stretch;
         flex-wrap: wrap;
-        gap: 4rem;
-        margin-block: 3rem;
+        margin-inline: auto;
+
+        @media (min-width: 960px) {
+        grid-template-columns: 1fr 1fr;
+    }
     }
 
-    .about__content {
+    
+
+    .services__description {
+        padding: 5em;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        gap: 1rem;
-        line-height: 2.5em;
+        gap: 2em;
+        background: #E2E2E2;
     }
 
-    .about__img > img {
+
+    .separator {
         width: 100%;
-        height: auto;
-        object-fit: cover;
-        border-radius: .25em;
+        height: 1px;
+        background-color: var(--primary);
     }
+
+    .services__img > img{
+        width: auto;
+        height: 100%;
+        object-fit: cover;        
+    }
+
+    .program-title {
+        text-transform: uppercase;
+        line-height: 1.2em;
+        color: var(--primary);
+    }
+    
+    .info-tecniche {
+        padding-block: 5em;
+        display: grid;
+        gap: 1em;
+    }
+
+    .one-col {
+        padding: 2em;
+    }
+
+    .breadcrumbs {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+    }
+    
+
+   
+
 </style>

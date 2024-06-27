@@ -1,39 +1,110 @@
 ---
-import SinglePage from "../layouts/SinglePage.astro"
-
+import BasicLayout from "../layouts/BasicLayout.astro";
+import Prenota from "../components/Prenota.astro";
+import ProgramCards from "../components/ProgramCards.astro";
 ---
 
-    <SinglePage title="Cultura Dieta">
-        <div class="container cultura-dieta">
-            <p>
-                Nel bene e nel male oggi tutti parlano di diete, di cibo, di corpi,
-                di sport…se da un lato tutta questa attenzione ha sensibilizzato le persone
-                e ha spinto molti di noi a scegliere con una maggior cura ciò che mettiamo nel piatto,
-                dall’altro ha generato una mole immensa di falsi miti e una grande confusione. 
-                Poniti una domanda molto semplice: “QUANTO TEMPO PASSI A PENSARE AL CIBO?”
-                Perché anche se la cultura della dieta in cui siamo immersi (o meglio dire sommersi)
-                ha normalizzato comportamenti come il tracciare le calorie dei pasti, definire le uscite
-                sociali come sgarri, associare il senso di colpa al cibo, sappi che non è così.
-                È possibile decostruire tutte queste false credenze e far proprio un modo di nutrirsi più leggero
-                e di vero benessere perché, se ci rifletti, quando è diventato tutto così difficile?
-                Le diete rigide e restrittive sono la strada più rapida e sicura per mandare il tuo corpo
-                in cortocircuito…Mangiare è un bisogno primario, come dormire o bere, come può quindi essere così complicato?
-            </p>
+<BasicLayout title="Cultura dieta">
+    
+    <div class="container services">
+    
+        
+            <div class="services__img">
+                <img src="../media/cultura-dieta.webp" alt="">
+            </div>
+
+            <div class="services__description">
+                <div class="breadcrumbs"><a href="/"><p>Home</p></a> <p>/ Cultura dieta</p></div>
+                <h1 class="program-title">Cultura dieta</h1>
+                
+                <p>
+                    Nel bene e nel male oggi tutti parlano di diete, di cibo, di corpi,
+                    di sport…se da un lato tutta questa attenzione ha sensibilizzato le persone
+                    e ha spinto molti di noi a scegliere con una maggior cura ciò che mettiamo nel piatto,
+                    dall’altro ha generato una mole immensa di falsi miti e una grande confusione. 
+                    Poniti una domanda molto semplice: “QUANTO TEMPO PASSI A PENSARE AL CIBO?”</p>
+                
+                <p>Perché anche se la cultura della dieta in cui siamo immersi (o meglio dire sommersi)
+                    ha normalizzato comportamenti come il tracciare le calorie dei pasti, definire le uscite
+                    sociali come sgarri, associare il senso di colpa al cibo, sappi che non è così.
+                    <strong>È possibile decostruire tutte queste false credenze e far proprio un modo di nutrirsi più leggero</strong>
+                    e di vero benessere perché, se ci rifletti, quando è diventato tutto così difficile?<br><br>
+                    Le diete rigide e restrittive sono la strada più rapida e sicura per mandare il tuo corpo
+                    in cortocircuito…Mangiare è un bisogno primario, come dormire o bere, come può quindi essere così complicato?
+                </p>
+            </div>
+            
         </div>
-    </SinglePage>
+
+    <ProgramCards></ProgramCards>
+
+    <Prenota></Prenota>
+
+</BasicLayout>
 
 <style>
 
     
+    .services{
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr;
+        
+        justify-items: stretch;
+        flex-wrap: wrap;
+        margin-inline: auto;
+
+        @media (min-width: 960px) {
+        grid-template-columns: 1fr 1fr;
+    }
+    }
+
     
-    .cultura-dieta {
-        max-width: 100%;
-        margin-block: 5rem;
+
+    .services__description {
+        padding: 5em;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        background: var(--light-bg);
     }
 
-    @media (min-width: 40em) {
-        max-width: 60%;
+
+    .separator {
+        width: 100%;
+        height: 1px;
+        background-color: var(--primary);
     }
 
+    .services__img > img{
+        width: auto;
+        height: 100%;
+        object-fit: cover;        
+    }
+
+    .program-title {
+        text-transform: uppercase;
+        line-height: 1.2em;
+        color: var(--primary);
+    }
+    
+    .info-tecniche {
+        padding-block: 5em;
+        display: grid;
+        gap: 1em;
+    }
+
+    .one-col {
+        padding: 2em;
+    }
+
+    .breadcrumbs {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+    }
+    
+
+   
 
 </style>
