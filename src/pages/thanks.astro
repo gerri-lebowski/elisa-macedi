@@ -1,0 +1,42 @@
+---
+import BasicLayout from "../layouts/BasicLayout.astro";
+---
+
+<BasicLayout title="Elisa Macedi - Biologa Nutrizionista">	
+	
+    <div class="container thank-you">
+        <h1>Grazie per aver compilato la richiesta!</h1>
+        <h2>Presto ti ricontatterò</h2>
+        <a href="/">Torna al sito</a>
+    </div>
+	
+
+</BasicLayout>
+
+<style>
+    .thank-you{
+        min-height: 70vh;
+        display: grid;
+        place-content: center;
+        place-items: center;
+        color: var(--primary);
+        text-align: center;
+        gap: 2em;
+    }
+
+    .thank-you a {
+        font-size: 3rem;
+        border: 1px solid var(--primary);
+        width: 30rem;
+        padding: 1em;
+        text-transform: uppercase;
+        border-radius: .25em;
+        transition: all .5s ease-in-out;
+    }
+
+    .thank-you a:hover {
+        background-color: var(--primary);
+        color: white;
+    }
+
+</style>
