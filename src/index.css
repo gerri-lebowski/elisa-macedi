@@ -100,7 +100,7 @@ h3 {font-family: 'co-headline', sans-serif; font-size: var(--text-md); text-tran
 h4 {font-family: 'co-headline', sans-serif; font-size: var(--text-sm); text-transform: uppercase; font-weight: normal;}
 p  {font-family: 'Jost', sans-serif;font-size: var(--text-xs); line-height: 1.3em; }
 
-a { font-size: 1.5rem;text-decoration: none; color: var(--link); }
+a { font-size: 1.5rem;text-decoration: none; color: var(--link); font-family: 'Jost', sans-serif;}
 a:hover { color: var(--primary-50); }
 label{ font-family: 'Jost', sans-serif; font-size: var(--text-xs); }
 .container { width: min(100% - 4rem, 120rem); margin-inline: auto; }
