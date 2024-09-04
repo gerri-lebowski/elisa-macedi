@@ -7,5 +7,10 @@ export default defineConfig({
   site: "https://elisamacedinutrizione.com",
   prefetch: true,
   publicDir: "public",
-  integrations: [sitemap()],
+  integrations: [
+    sitemap({
+      filter: (page) =>
+        page !== "https://elisamacedinutrizione.com/privacy-policy"
+    }),
+  ],
 });

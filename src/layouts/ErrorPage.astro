@@ -4,6 +4,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Form from '../components/Form.astro';
 import '../index.css';
+import CommonHead from '../components/CommonHead.astro';
 
 const {title} = Astro.props;
 
@@ -12,12 +13,7 @@ const {title} = Astro.props;
 <!DOCTYPE html>
 <html lang="it">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{ title }</title>
-    <link rel="stylesheet" href="../index.css">  
-    
+    <CommonHead title={title} />
   </head>
   
   <body>
