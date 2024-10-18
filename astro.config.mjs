@@ -10,7 +10,12 @@ export default defineConfig({
   integrations: [
     sitemap({
       filter: (page) =>
-        page !== "https://elisamacedinutrizione.com/privacy-policy"
+        page !== "https://elisamacedinutrizione.com/privacy-policy",
     }),
   ],
+  // REDIRECTS
+  redirects: {
+    "/utm_medium=gmb&utm_campaign=596760&utm_content=website":
+      "/",
+  },
 });
