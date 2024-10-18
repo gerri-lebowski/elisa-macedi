@@ -15,7 +15,6 @@ export default defineConfig({
   ],
   // REDIRECTS
   redirects: {
-    "/utm_medium=gmb&utm_campaign=596760&utm_content=website":
-      "/",
+    // Here goes redirects
   },
 });
