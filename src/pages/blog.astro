@@ -1,0 +1,53 @@
+---
+import BasicLayout from "../layouts/BasicLayout.astro";
+import Prenota from "../components/Prenota.astro";
+
+import '../styles/blog.css';
+
+// Raccoglie tutti i file markdown dalla cartella posts
+const posts = await Astro.glob('./posts/*.md');
+
+// Ordina i post per data (assumendo che abbiano una proprietà frontmatter.date)
+const sortedPosts = posts.sort((a, b) => {
+  return new Date(b.frontmatter.date) - new Date(a.frontmatter.date);
+});
+
+
+---
+
+<BasicLayout title="Blog">	
+
+    <div class="container blog">
+        <div class="blog__title">
+            <h1 class="text-center">Guide sulla nutrizione</h1>
+        </div>
+    </div>
+	
+    <div class="blog-grid">
+        {sortedPosts.map((post) => (
+          <a href={post.url} class="post-card">
+            <img 
+              src={post.frontmatter.image.url || '/placeholder-image.jpg'} 
+              alt={post.frontmatter.title || 'Immagine del post'}
+              class="post-image"
+            />
+            <div class="post-content">
+              <h2 class="post-title">
+                {post.frontmatter.title || 'Titolo non disponibile'}
+              </h2>
+              {post.frontmatter.excerpt && (
+                <p class="post-excerpt">{post.frontmatter.excerpt}</p>
+              )}
+              {post.frontmatter.date && (
+                <p class="post-date">
+                  {new Date(post.frontmatter.date).toLocaleDateString('it-IT')}
+                </p>
+              )}
+            </div>
+          </a>
+        ))}
+      </div>
+
+	<Prenota />
+
+</BasicLayout>

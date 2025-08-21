@@ -1,0 +1,27 @@
+.blog {
+    padding-block: 10em;
+}
+
+
+.blog-grid {
+    width: 80%;
+    max-width: 1080px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    margin-inline: auto;
+    margin-bottom: 10em;
+    padding: 1em;
+    gap: 2em;
+}
+
+.post-image {
+    height: 300px;
+    max-height: 300px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.post-title {
+    font-size: 3rem;
+    line-height: 1.3;
+}

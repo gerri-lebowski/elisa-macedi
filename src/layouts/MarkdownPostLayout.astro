@@ -1,0 +1,49 @@
+---
+const { frontmatter } = Astro.props;
+import CommonHead from "../components/CommonHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import '../index.css';
+---
+
+<!doctype html>
+<html lang="it">
+
+  <head>
+    <CommonHead />
+    
+  </head>
+  
+  <body>
+    <Header />
+    
+    <main>
+        <div class="container single-post">
+            <h1 class="single-post__title">{frontmatter.title}</h1>
+            <p class="single-post__author">Scritto da {frontmatter.author}</p>
+            <img class="single-post__image" src={frontmatter.image.url} alt={frontmatter.image.alt} >
+            <slot />
+        </div>
+        
+    </main>
+    <Footer />
+
+    <style>
+
+      :global(li) {
+        font-size: 1.6rem;
+      }
+
+      .single-post__image {
+        max-width: 500px;
+        height: 300px;
+        object-fit: cover;
+        margin-inline: auto;
+        margin-block: 5em;
+      }
+
+    </style>
+    
+
+  </body>
+</html>

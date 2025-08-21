@@ -109,6 +109,20 @@ label{ font-family: 'Jost', sans-serif; font-size: var(--text-xs); }
 .border-xs{border: 1px solid var(--primary);border-radius: 4px;}
 .bg-primary{background-color: var(--primary); color: white;}
 
+/*------------
+BLOG SECTION
+------------*/
+
+.single-post{
+  padding-top: 3em;
+  margin-block: 4em;
+  min-height: 50vh;
+  max-width: 1000px;
+}
+
+.single-post__title {text-align: center;}
+.single-post__author {text-align: center; margin-bottom: 1em;}
+
 /* -----------
 LENIS & ANIMATIONS
 -------------*/
@@ -148,4 +162,13 @@ html.lenis, html.lenis body {
   from  { transform: translateX(-100%); }
   to    { transform: translateX(0); }
 
+}
+
+
+/*------
+UTILITY
+-------*/
+
+.text-center {
+  text-align: center;
 }
